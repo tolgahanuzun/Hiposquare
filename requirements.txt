@@ -1,0 +1,5 @@
+Django==1.11.1
+psycopg2==2.7.1
+requests==2.14.2
+whitenoise
+gunicorn

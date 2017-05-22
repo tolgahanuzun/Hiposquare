@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block details%}
+
+
+<fieldset>  
+    <legend>Result </legend> 
+        <table class="bordered"> 
+            <tr> 
+            <td>Name</td><td>Phone</td><td>Checkin Count</td>
+            </tr>      
+            {% for context in contexts %}
+            <tr>
+            <td title="{{context.location.address}}">{{context.name}} </td><td>{{context.contact.formattedPhone|default:"Contact hasn't"}} </td><td>{{context.stats.checkinsCount}} </td>
+            </tr>
+            {% endfor %}
+        </table>    
+        </fieldset>
+
+{% endblock %}
